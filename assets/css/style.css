@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px auto;
+  max-width: 600px;
+  width: 100%;
+  height: 220px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card-img {
+  width: 37%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.info-box {
+  height: 100%;
+  width: 63%;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.info-box h3 {
+  color: hsl(217, 19%, 35%);
+  font-size: 16px;
+}
+.info-box .text {
+  font-size: 11px;
+  color: hsl(214, 17%, 51%);
+  font-weight: 600;
+}
+.info-box .foot {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 150px;
+}
+.info-box .foot .profile {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.info-box .foot .profile .more .name {
+  color: hsl(217, 19%, 35%);
+  font-size: 12px;
+}
+.info-box .foot .profile .more .date {
+  font-size: 11px;
+  color: hsl(214, 17%, 51%);
+}
+.info-box .foot .avatar {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+}
+.info-box .foot .share img {
+  width: 16px;
+  height: 16px;
+}
+.info-box .foot .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+.info-box .foot .share .tooltip {
+  opacity: 0;
+  position: absolute;
+  top: -60px;
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.info-box .foot .share .tooltip::before {
+  position: absolute;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: hsl(217, 19%, 35%);
+  transform: translateX(-50%) rotate(45deg);
+}
+.info-box .foot .share .tooltip p {
+  font-size: 10px;
+  font-weight: 600;
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    margin: 100px auto;
+    max-width: 350px;
+    width: 100%;
+    height: 420px;
+    flex-direction: column;
+  }
+  .card-img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    height: 45%;
+  }
+  .info-box {
+    height: 65%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+    width: 100%;
+    padding-bottom: 0 !important;
+  }
+  .tooltip {
+    margin-top: 35px;
+    width: 350px;
+    bottom: -16px;
+    right: -29px;
+    gap: 35px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  .tooltip::before {
+    opacity: 0;
+  }
+}
